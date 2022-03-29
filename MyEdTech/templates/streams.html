@@ -1,0 +1,64 @@
+{% extends "basestreams.html" %}
+{% load static %}
+{% block body_block %}
+<head>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <style  type="text/css">
+.containeriframe {
+ position: absolute;
+ overflow: hidden;
+ width: 100%;
+ padding-top: 75%;  16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width   <iframe class="responsive-iframe" src="https://rss.app/embed/v1/wall/1WDUMHXj2T0wdSAu" frameborder="0"></iframe>*/
+.responsive-iframe {
+  position: absolute;
+  top: 50;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  padding-top:150px;
+}
+
+ #footer {
+
+  background-color: rgb(134, 143, 137);
+  padding-top: 150px;
+  margin-top: 50px;
+  text-align: center;
+  padding-bottom: 150px;
+         }
+
+
+</style>
+
+</head>
+
+<div class="containeriframe">
+ <iframe class="responsive-iframe" src="https://rss.app/embed/v1/carousel/1WDUMHXj2T0wdSAu" frameborder="0"></iframe>
+</div>
+      <div id="footer">
+
+        <div class="row">
+
+                <h2>Customise Your Learning</h2>
+
+            <p class="lead">Learn at your own pace with your own content</p>
+
+            <p><a href=""><img id="appStoreIcon" src="{% static 'images/Learning4.png'%}"></a></p>
+
+
+
+          </div>
+
+      </div>
+
+
+
+{% endblock %}
